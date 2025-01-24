@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-purple-600 text-white hover:bg-purple-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-700 hover:bg-gray-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-4;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}
+
+/* Chart customizations */
+.chart-container {
+  @apply relative w-full h-full;
+}
+
+.chart-tooltip {
+  @apply bg-white rounded-lg shadow-lg p-2 border border-gray-200;
+}
+
+/* Navigation customizations */
+.nav-item {
+  @apply flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-purple-50 rounded-lg transition-colors duration-200;
+}
+
+.nav-item-active {
+  @apply bg-purple-50 text-purple-700;
+}
+
+/* Filter panel customizations */
+.filter-panel {
+  @apply fixed right-0 top-16 h-[calc(100vh-4rem)] bg-white shadow-lg transition-all duration-300;
+}
+
+.filter-panel-expanded {
+  @apply w-64;
+}
+
+.filter-panel-collapsed {
+  @apply w-1;
+}

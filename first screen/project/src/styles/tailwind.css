@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 88 28 135; /* purple-900 */
+    --color-secondary: 107 114 128; /* gray-500 */
+  }
+
+  body {
+    @apply antialiased text-gray-800 bg-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-purple-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors duration-200 font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-purple-900 text-white hover:bg-purple-800;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-4;
+  }
+
+  .input {
+    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+  }
+
+  .select {
+    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-900 transition-colors cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-purple-900 to-purple-700;
+  }
+}
